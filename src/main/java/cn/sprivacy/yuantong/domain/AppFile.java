@@ -6,8 +6,8 @@ import lombok.experimental.Accessors;
 import java.util.Date;
 
 /**
- * @author: cailun
- * @date: 2018年 07月26日
+ * @author cailun
+ * @date 2018年 07月26日
  */
 @Data
 @Accessors(chain = true)
