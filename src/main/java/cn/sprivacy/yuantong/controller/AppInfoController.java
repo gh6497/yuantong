@@ -1,10 +1,14 @@
 package cn.sprivacy.yuantong.controller;
 
+import cn.sprivacy.yuantong.condition.InfoCondition;
 import cn.sprivacy.yuantong.domain.AppInfo;
 import cn.sprivacy.yuantong.service.InfoService;
 import cn.sprivacy.yuantong.util.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 /**
  * @author cailun
@@ -23,10 +27,11 @@ public class AppInfoController {
     /**
      *
      */
-    @GetMapping("/page/{index}/{size}")
-    public  PageResult<AppInfo> AppInfoByPage(@PathVariable("index") Integer index,
-                              @PathVariable("size") Integer size) {
-        return infoService.page(index, size);
+    @GetMapping("/page/{currentPage}/{pageSize}")
+    public  PageResult<AppInfo> AppInfoByPage(@PathVariable("currentPage") Integer index,
+                                              @PathVariable("pageSize") Integer size, InfoCondition infoCondition) {
+        System.out.println(1234);
+        return infoService.page(index, size, infoCondition);
 
     }
 }

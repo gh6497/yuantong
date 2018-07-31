@@ -33,7 +33,7 @@ public class AppUserController {
 
                     build.setCode(1).setMsg("用户名或密码错误");
                 } else {
-                    request.setAttribute("user", userByUsername.setPasswd(null));
+                    build.setObj(userByUsername.setPasswd(null));
                 }
             } else {
                 build.setCode(1).setMsg("用户名或密码错误");

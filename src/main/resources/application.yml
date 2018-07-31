@@ -20,3 +20,4 @@ server:
     max-http-post-size: 0
   servlet:
     context-path: /
+  port: 8081

@@ -1,5 +1,6 @@
 package cn.sprivacy.yuantong.service;
 
+import cn.sprivacy.yuantong.condition.InfoCondition;
 import cn.sprivacy.yuantong.domain.AppInfo;
 import cn.sprivacy.yuantong.util.PageResult;
 
@@ -9,5 +10,5 @@ import cn.sprivacy.yuantong.util.PageResult;
  */
 
 public interface InfoService {
-    PageResult<AppInfo> page(Integer index, Integer size);
+    PageResult<AppInfo> page(Integer currentPage, Integer pageSize, InfoCondition infoCondition);
 }

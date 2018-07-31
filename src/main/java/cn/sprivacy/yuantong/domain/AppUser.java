@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
  * @date 2018年 07月26日
  */
 @Entity
-@Table(name = "app01_user")
+@Table(name = "_user")
 @Data
 @Accessors(chain = true)
 public class AppUser {

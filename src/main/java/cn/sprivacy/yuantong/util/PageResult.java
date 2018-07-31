@@ -12,13 +12,27 @@ import java.util.List;
 @Data
 @Accessors(chain = true)
 public class PageResult<T> {
-    private Long conut;
+    /**
+     * 总行数
+     */
+    private Long total;
 
-    private Integer index;
+    /**
+     * 当前页
+     */
+    private Integer currentPage;
 
-    private Integer size;
+    /**
+     * 每页显示数量
+     */
+    private Integer PageSize;
 
+    /**
+     * 总页数
+     */
     private Integer totalPage;
-
+    /**
+     * 数据
+     */
     private List<T> data;
 }

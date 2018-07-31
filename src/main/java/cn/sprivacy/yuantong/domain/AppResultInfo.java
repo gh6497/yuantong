@@ -1,5 +1,7 @@
 package cn.sprivacy.yuantong.domain;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -7,8 +9,9 @@ import java.util.Date;
  * @author cailun
  * @date 2018年 07月26日
  */
+@Data
 @Entity
-@Table(name = "app01_resultinfo")
+@Table(name = "resultinfo")
 public class AppResultInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

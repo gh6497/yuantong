@@ -11,7 +11,7 @@ import java.util.Date;
  * @date 2018年 07月26日
  */
 @Entity
-@Table(name = "app01_file")
+@Table(name = "file")
 @Data
 @Accessors(chain = true)
 public class AppFile {
@@ -23,7 +23,7 @@ public class AppFile {
     private String fileName;
 
     @Column(name = "submit_time")
-    private Date submitTime;
+    private Long submitTime;
 
     @Column(name = "upload_byfile")
     private Boolean uploadByFile;

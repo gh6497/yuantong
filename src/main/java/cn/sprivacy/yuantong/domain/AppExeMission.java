@@ -1,21 +1,19 @@
 package cn.sprivacy.yuantong.domain;
 
 import lombok.Data;
-import lombok.experimental.Accessors;
 
 import javax.persistence.*;
 import java.util.Date;
 
 /**
- * @authorcailun
- * @date 2018年 07月26日
+ * @author cailun
+ * @date 2018年 07月31日
  */
-@Entity
-@Table(name = "info")
 @Data
-@Accessors(chain = true)
-public class AppInfo {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Entity()
+@Table(name = "exe_mission")
+public class AppExeMission {
+    @GeneratedValue(strategy = GenerationType.TABLE)
     @Id
     private Integer id;
 
@@ -33,6 +31,7 @@ public class AppInfo {
 
     private Integer delay;
 
+    private Integer result;
 
     @Column(name = "import_date")
     private Date importDate;
